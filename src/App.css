@@ -1,38 +1,622 @@
-.App {
+/* @font-face {
+  font-family: 'QR';
+  src: url(./fonts/Gerona.otf);
+} */
+
+.root {
+  overflow-y:hidden;
+}
+
+.background{
+  overflow: hidden;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: QR, sans-serif;
+}
+
+.decreaseNFT{
+  width: 30px;
+  height:50px;
+  font-size: 30px;
+}
+
+.increaseNFT{
+  width: 30px;
+  height:50px;
+  font-size: 30px;
+}
+
+.descriptionNFT{
+  letter-spacing: 2px;
+  color: black;
+}
+
+.titleNFT{
+  letter-spacing: 2px;
   text-align: center;
+  color:black;
+  font-size: 35px;
+  padding-top:15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mintNFT{
+  width: 120px;
+  height: 80px;
+  font-size: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.decreaseNFT:hover{
+  cursor:pointer;
+}
+
+.increaseNFT:hover{
+  cursor:pointer;
+}
+
+.mintNFT:hover{
+  cursor:pointer;
+}
+
+
+
+.doubleD{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* width: 80%; */
+  /* min-height: 100vh; */
+  margin-top: 93px;
+  height:auto;
+  max-width:500px;
+}
+
+.coolArt{
+  /* background-color: #000000; */
+  overflow:hidden;
+  /* margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto; */
+  flex-grow: 1;
+  display:flex;
+    max-height: 730px;
+    width:500px;
+}
+
+.mintProcedure{
+  overflow:hidden;
+  /* background-color: green; */
+  flex-grow: 1;
+  text-align: center;
+  color:white;
+  /* background-color:black; */
+  /* overflow:auto; */
+  align-self: stretch;
+  min-height: 730px;
+  display:flex;
+  justify-content: center;
+}
+
+.jpg{
+  max-width: 30vw;
+  height:auto;
+  max-height: 50vh;
+  border-width:10px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* vertical-align: middle; */
+  width: auto;
+  /* flex-basis: 50%; */
+  align-self: center;
+}
+
+.mintInfo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  max-width:75%;
+  /* flex-basis: 50%; */
+  /* justify-content: center; */
+  justify-content: center;
+  align-self: center;
+}
+.rightSide{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px; 
+  height: auto;
+  /* vertical-align: middle; */
+  width: auto;
+  flex-basis: 50%;
+  align-self: center;
+  /* flex-direction: column; */
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+  /* background-color: #000000; */
+  position: fixed;
+  top:0;
+  z-index: 10000;
+  width:100%;
+}
+
+.logo {
+  margin-right: auto;
+  margin-top:100px;
+  /* max-width: 100%; */
+  /* height: 50vh; */
+  width: 30vw;
+}
+
+.connectwallet:hover{
+  color: #c7c5c5
+}
+
+
+.connectwallet2:hover{
+  color: #c7c5c5
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.connectwallet{
+  font-weight: bold;
+  border-width: 0px;
+margin-right: 60px;
+margin-top: 140px;
+  font-family: impact;
+  color: white;
+  font-size: 20px;
+  width: 15vw;
+  background-color: #3cb44c;
+  border-radius: 10px;
+  height: 7vh;
+}
+
+.toplevel{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inboxbutton{
+  align-self: center;
+  flex-grow: 1;
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 3vh;
+}
+
+.titledobies{
+  text-align: center;
+  font-family: impact;
+  align-self: center;
+  font-size: 50px;
+  color: white;
+  flex-grow: 1;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: -14vh;
+  margin-top: 4vh;
+}
+
+.greybox{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15vh;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55vw;
+  height: 35vh;
+  border-radius: 5%;
+  background-color: #34343c;
+}
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.smIcon{
+  width: auto;
+  height: auto;
+  max-height:5vh;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #0088a9;
+}
+
+.pink{
+  color: rgb(255, 162, 178);
+  font-size: 30px;
+}
+
+.connectwallet2{
+  font-weight: bold;
+  border-width: 0px;
+margin-right: 60px;
+margin-top: 140px;
+  font-family: impact;
+  color: black;
+  font-size: 20px;
+  width: 15vw;
+  background-color: #3cb44c;
+  border-radius: 10px;
+  height: 7vh;
+}
+
+.tokenInput{
+  margin-right: auto;
+  margin-left: auto;
+  /* width: 50vw; */
+  text-align: center;
+  width: 80%;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.form{
+  margin-top: auto;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.unstake:hover{
+  color: #c7c5c5;
+  cursor: pointer;
+}
+
+.unstake{
+  margin-top: 1px;
+  font-weight: bold;
+  font-family: impact;
+  color: white;
+  background-color: red;
+  width: 44vw;
+  border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+    font-size: 50px;
+    margin-top: auto;
+    margin-bottom: 4vh;
+}
+
+.stake:hover{
+  color: #c7c5c5;
+  cursor: pointer;
+}
+
+.stake{
+  font-weight: bold;
+  font-family: impact;
+  color: white;
+  background-color: #3cb44c;
+  width: 44vw;
+  border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 50px;
+  margin-top: auto;
+  margin-bottom: -18px;
+}
+
+.cta {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: rgb(255, 162, 178);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+  font-family: QR, sans-serif;
+  font-size: 30px;
+}
+
+.inputBox{
+  margin-bottom: 5px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.movingBackground{
+  background-color: black;
+  animation: bg-animation 8s infinite alternate;
+  background-size:300%;
+  overflow:hidden;
+  height:100vh;
+  /* background-color: green; */
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  33% {
+    background-position: right;
+  }
+  67%{
+    background-position: left;
+  }
+  100%{
+    background-position:right;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.overlay__content {
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+/* 
+.logo{
+  width: auto;
+  height: auto;
+  max-height:10vh;
+  margin-top:100px;
+} */
+
+.banner{
   color: white;
+  background-color: #3cb44c;
+  font-family: impact;
+  position: absolute;
+  white-space: nowrap;
+  font-size: 3em;
+  line-height: 10vh;
+  animation: animate 90s linear infinite;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes animate{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  /* color: #edf0f1; */
+  cursor: pointer;
+}
+.stakeinfo{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.info{
+  margin-bottom: -70px;
+  font-size: 15px;
+  margin-top: 5vh;
+  padding-right: 30px;
+   padding-left: 30px;
+  color: white;
+  text-align:center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.level{
+  font-size: 12px;
+  color: white;
+  text-align:center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+}
+.mobilever{
+  display: none;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
+
+}
+
+@media only screen and (max-width: 800px) {
+  .connectwallet{
+    margin-right: 25px;
+    margin-top:100px;
+  }
+
+  .all{
+    height: 685px;
+    overflow-y: auto;
+  }
+
+  .connectwallet2{
+    margin-right: 25px;
+    width: 20%;
+    margin-top:100px;
+  }
+
+  .greybox{
+    height: 60vh;
+  }
+  .inboxbutton{
+    margin-right: auto;
+  }
+
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+  .jpg{
+    margin-top: 70px;
+  }
+  .mobilever{
+    display:block;
+    margin-top:-4px;
+    margin-bottom: 10px;
+    max-width: 250px;
+    margin-right:auto;
+    margin-left:auto;
+  }
+  #desktopOnly{
+    display:none;
+  }
+  *{
+    overflow:hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .coolArt{
+    display:none;
+  }
+
+  .mintProcedure{
+    margin-top:-60px;
+  }
+
+  .doubleD{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 650px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 800px){
+  *{
+    overflow:hidden;
+  }
+  .doubleD{
+    margin-right: auto;
+    margin-left:auto;
+    max-width: 100vh;
+    max-height: 100vh;
+    /* gap: 50vh; */
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    /* align-items: stretch; */
+  }
+  #desktopOnly{
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .mintProcedure{
+    max-width: 55%;
+    
+    height: auto;
+    margin-left: 30px;
+    overflow: hidden;
+  }
+  .coolArt{
+    justify-self: center;
+    max-width: 100%;
+    width:70vw;
+    height: auto;
+    margin-right:30px;
+    overflow: hidden;
+  }
+  .jpg{
+    justify-self: flex-start;
+    width:50vw;
+    height: auto;
+  }
+  .mintInfo{
+    max-width: 1000px;
+  }
+
 }
